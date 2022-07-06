@@ -1,0 +1,18 @@
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:          http://holo.live
+[+] Method:       GET
+[+] Threads:      10
+[+] Wordlist:     /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt
+[+] User Agent:   gobuster/3.1.0
+[+] Timeout:      10s
+===============================================================
+2022/04/21 07:32:51 Starting gobuster in VHOST enumeration mode
+===============================================================
+Found: dev.holo.live (Status: 200) [Size: 7515]
+Found: admin.holo.live (Status: 200) [Size: 1845]
+Found: www.holo.live (Status: 200) [Size: 21405] 
+Found: gc._msdcs.holo.live (Status: 400) [Size: 422]
+Found: _domainkey.holo.live (Status: 400) [Size: 422]

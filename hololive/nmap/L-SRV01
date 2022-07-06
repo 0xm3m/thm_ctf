@@ -1,0 +1,86 @@
+# Nmap 7.92 scan initiated Thu Apr 21 07:03:37 2022 as: nmap -sS -A -v -p- -oN nmap/L-SRV01 10.200.111.33
+Nmap scan report for 10.200.111.33
+Host is up (0.19s latency).
+Not shown: 65532 closed tcp ports (reset)
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 10:9e:b2:eb:5d:aa:7f:06:27:e0:0b:33:45:61:46:53 (RSA)
+|   256 ea:bc:9b:b0:f4:c8:be:d2:fc:a6:6c:9c:de:64:47:43 (ECDSA)
+|_  256 4d:6f:9a:36:ba:20:30:ed:4d:d3:1d:d1:f0:ed:83:c7 (ED25519)
+80/tcp    open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+| http-robots.txt: 21 disallowed entries (15 shown)
+| /var/www/wordpress/index.php 
+| /var/www/wordpress/readme.html /var/www/wordpress/wp-activate.php 
+| /var/www/wordpress/wp-blog-header.php /var/www/wordpress/wp-config.php 
+| /var/www/wordpress/wp-content /var/www/wordpress/wp-includes 
+| /var/www/wordpress/wp-load.php /var/www/wordpress/wp-mail.php 
+| /var/www/wordpress/wp-signup.php /var/www/wordpress/xmlrpc.php 
+| /var/www/wordpress/license.txt /var/www/wordpress/upgrade 
+|_/var/www/wordpress/wp-admin /var/www/wordpress/wp-comments-post.php
+|_http-title: holo.live
+|_http-generator: WordPress 5.5.3
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+33060/tcp open  mysqlx?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, LDAPSearchReq, NotesRPC, SSLSessionReq, TLSSessionReq, X11Probe, afp: 
+|     Invalid message"
+|_    HY000
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port33060-TCP:V=7.92%I=7%D=4/21%Time=6260B6E3%P=aarch64-unknown-linux-g
+SF:nu%r(NULL,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(GenericLines,9,"\x05\0\0\
+SF:0\x0b\x08\x05\x1a\0")%r(GetRequest,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(
+SF:HTTPOptions,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(RTSPRequest,9,"\x05\0\0
+SF:\0\x0b\x08\x05\x1a\0")%r(RPCCheck,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(D
+SF:NSVersionBindReqTCP,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(DNSStatusReques
+SF:tTCP,2B,"\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1
+SF:a\x0fInvalid\x20message\"\x05HY000")%r(Help,9,"\x05\0\0\0\x0b\x08\x05\x
+SF:1a\0")%r(SSLSessionReq,2B,"\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x
+SF:08\x01\x10\x88'\x1a\x0fInvalid\x20message\"\x05HY000")%r(TerminalServer
+SF:Cookie,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(TLSSessionReq,2B,"\x05\0\0\0
+SF:\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20mes
+SF:sage\"\x05HY000")%r(Kerberos,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(SMBPro
+SF:gNeg,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(X11Probe,2B,"\x05\0\0\0\x0b\x0
+SF:8\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20message\"\
+SF:x05HY000")%r(FourOhFourRequest,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(LPDS
+SF:tring,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(LDAPSearchReq,2B,"\x05\0\0\0\
+SF:x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20mess
+SF:age\"\x05HY000")%r(LDAPBindReq,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(SIPO
+SF:ptions,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(LANDesk-RC,9,"\x05\0\0\0\x0b
+SF:\x08\x05\x1a\0")%r(TerminalServer,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(N
+SF:CP,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(NotesRPC,2B,"\x05\0\0\0\x0b\x08\
+SF:x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20message\"\x0
+SF:5HY000")%r(JavaRMI,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(WMSRequest,9,"\x
+SF:05\0\0\0\x0b\x08\x05\x1a\0")%r(oracle-tns,9,"\x05\0\0\0\x0b\x08\x05\x1a
+SF:\0")%r(ms-sql-s,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(afp,2B,"\x05\0\0\0\
+SF:x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20mess
+SF:age\"\x05HY000")%r(giop,9,"\x05\0\0\0\x0b\x08\x05\x1a\0");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=4/21%OT=22%CT=1%CU=42360%PV=Y%DS=2%DC=T%G=Y%TM=6260B71
+OS:2%P=aarch64-unknown-linux-gnu)SEQ(SP=106%GCD=1%ISR=10E%TI=Z%CI=Z%II=I%TS
+OS:=A)SEQ(SP=106%GCD=1%ISR=10E%TI=Z%CI=Z%TS=A)OPS(O1=M506ST11NW7%O2=M506ST1
+OS:1NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)WIN(W1=F4
+OS:B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M5
+OS:06NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4
+OS:(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%
+OS:F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%
+OS:T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%R
+OS:ID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 17.492 days (since Sun Apr  3 19:26:11 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   189.33 ms 10.50.108.1
+2   189.47 ms 10.200.111.33
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 21 07:14:50 2022 -- 1 IP address (1 host up) scanned in 673.79 seconds

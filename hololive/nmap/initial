@@ -1,0 +1,5 @@
+# Nmap 7.92 scan initiated Thu Apr 21 07:00:00 2022 as: nmap -sC -sV -v -p- -oN nmap/initial 10.200.111.0/24
+Scanning 2 hosts [65535 ports/host]
+Discovered open port 22/tcp on 10.200.111.250
+Discovered open port 22/tcp on 10.200.111.33
+Discovered open port 80/tcp on 10.200.111.33

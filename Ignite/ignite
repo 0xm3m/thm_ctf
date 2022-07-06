@@ -1,0 +1,9 @@
+# Nmap 7.92 scan initiated Wed Jun 29 20:32:03 2022 as: nmap -sC -sV -p 80 -oN ignite 10.10.129.128
+Nmap scan report for 10.10.129.128
+Host is up (0.23s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http?
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jun 29 20:34:24 2022 -- 1 IP address (1 host up) scanned in 140.47 seconds
