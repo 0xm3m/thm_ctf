@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Jul  8 20:30:22 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/thm/machines/easy/vulnnetroasted/results/10.10.241.164/scans/tcp53/tcp_53_dns_nmap.txt -oX /root/thm/machines/easy/vulnnetroasted/results/10.10.241.164/scans/tcp53/xml/tcp_53_dns_nmap.xml 10.10.241.164 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/thm/machines/easy/vulnnetroasted/results/10.10.241.164/scans/tcp53/tcp_53_dns_nmap.txt -oX /root/thm/machines/easy/vulnnetroasted/results/10.10.241.164/scans/tcp53/xml/tcp_53_dns_nmap.xml 10.10.241.164" start="1657292422" startstr="Fri Jul  8 20:30:22 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="53"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1657292424"/>
+<taskend task="NSE" time="1657292424"/>
+<taskbegin task="NSE" time="1657292424"/>
+<taskend task="NSE" time="1657292424"/>
+<taskbegin task="NSE" time="1657292424"/>
+<taskend task="NSE" time="1657292424"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1657292424"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1657292424"/>
+<taskbegin task="SYN Stealth Scan" time="1657292424"/>
+<taskend task="SYN Stealth Scan" time="1657292424" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1657292425"/>
+<taskend task="Service scan" time="1657292571" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1657292571"/>
+<taskend task="NSE" time="1657292587"/>
+<taskbegin task="NSE" time="1657292587"/>
+<taskend task="NSE" time="1657292589"/>
+<taskbegin task="NSE" time="1657292589"/>
+<taskend task="NSE" time="1657292589"/>
+<host starttime="1657292424" endtime="1657292589"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.241.164" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="domain" method="table" conf="3"/><script id="dns-nsec3-enum" output="Can&apos;t determine domain for host 10.10.241.164; use dns-nsec3-enum.domains script arg."/><script id="dns-nsec-enum" output="Can&apos;t determine domain for host 10.10.241.164; use dns-nsec-enum.domains script arg."/></port>
+</ports>
+<hostscript><script id="dns-brute" output="Can&apos;t guess domain of &quot;10.10.241.164&quot;; use dns-brute.domain script argument."/></hostscript><times srtt="165549" rttvar="165549" to="827745"/>
+</host>
+<taskbegin task="NSE" time="1657292589"/>
+<taskend task="NSE" time="1657292589"/>
+<taskbegin task="NSE" time="1657292589"/>
+<taskend task="NSE" time="1657292589"/>
+<taskbegin task="NSE" time="1657292589"/>
+<taskend task="NSE" time="1657292589"/>
+<runstats><finished time="1657292589" timestr="Fri Jul  8 20:33:09 2022" summary="Nmap done at Fri Jul  8 20:33:09 2022; 1 IP address (1 host up) scanned in 167.14 seconds" elapsed="167.14" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
