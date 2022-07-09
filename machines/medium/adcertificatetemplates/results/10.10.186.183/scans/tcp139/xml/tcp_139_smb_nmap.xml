@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sat Jul  9 18:04:10 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/thm/machines/medium/results/10.10.186.183/scans/tcp139/tcp_139_smb_nmap.txt -oX /root/thm/machines/medium/results/10.10.186.183/scans/tcp139/xml/tcp_139_smb_nmap.xml 10.10.186.183 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/thm/machines/medium/results/10.10.186.183/scans/tcp139/tcp_139_smb_nmap.txt -oX /root/thm/machines/medium/results/10.10.186.183/scans/tcp139/xml/tcp_139_smb_nmap.xml 10.10.186.183" start="1657370050" startstr="Sat Jul  9 18:04:10 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1657370051"/>
+<taskend task="NSE" time="1657370051"/>
+<taskbegin task="NSE" time="1657370051"/>
+<taskend task="NSE" time="1657370051"/>
+<taskbegin task="NSE" time="1657370051"/>
+<taskend task="NSE" time="1657370051"/>
+<taskbegin task="SYN Stealth Scan" time="1657370051"/>
+<taskend task="SYN Stealth Scan" time="1657370051" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1657370051"/>
+<taskend task="Service scan" time="1657370058" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1657370058"/>
+<taskprogress task="NSE" time="1657370089" percent="92.86" remaining="3" etc="1657370091"/>
+<taskend task="NSE" time="1657370105"/>
+<taskbegin task="NSE" time="1657370105"/>
+<taskend task="NSE" time="1657370108"/>
+<taskbegin task="NSE" time="1657370108"/>
+<taskend task="NSE" time="1657370108"/>
+<host starttime="1657370051" endtime="1657370108"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.186.183" addrtype="ipv4"/>
+<hostnames>
+<hostname name="lundc.lunar.eruca.com" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb-protocols" output="&#xa;  dialects: &#xa;    2.0.2&#xa;    2.1&#xa;    3.0&#xa;    3.0.2&#xa;    3.1.1"><table key="dialects">
+<elem>2.0.2</elem>
+<elem>2.1</elem>
+<elem>3.0</elem>
+<elem>3.0.2</elem>
+<elem>3.1.1</elem>
+</table>
+</script><script id="smb-print-text" output="false">false</script><script id="smb2-time" output="&#xa;  date: 2022-07-09T12:34:26&#xa;  start_date: N/A"><elem key="date">2022-07-09T12:34:26</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb-vuln-ms10-061" output="Could not negotiate a connection:SMB: Failed to receive bytes: ERROR">false</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled and required"><table key="3.1.1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR"/></hostscript><times srtt="176006" rttvar="176006" to="880030"/>
+</host>
+<taskbegin task="NSE" time="1657370108"/>
+<taskend task="NSE" time="1657370108"/>
+<taskbegin task="NSE" time="1657370108"/>
+<taskend task="NSE" time="1657370108"/>
+<taskbegin task="NSE" time="1657370108"/>
+<taskend task="NSE" time="1657370108"/>
+<runstats><finished time="1657370108" timestr="Sat Jul  9 18:05:08 2022" summary="Nmap done at Sat Jul  9 18:05:08 2022; 1 IP address (1 host up) scanned in 58.02 seconds" elapsed="58.02" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

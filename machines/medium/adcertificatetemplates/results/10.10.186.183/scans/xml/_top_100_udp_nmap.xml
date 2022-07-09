@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sat Jul  9 17:53:10 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -A -&#45;top-ports 100 -oN /root/thm/machines/medium/results/10.10.186.183/scans/_top_100_udp_nmap.txt -oX /root/thm/machines/medium/results/10.10.186.183/scans/xml/_top_100_udp_nmap.xml 10.10.186.183 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -A -&#45;top-ports 100 -oN /root/thm/machines/medium/results/10.10.186.183/scans/_top_100_udp_nmap.txt -oX /root/thm/machines/medium/results/10.10.186.183/scans/xml/_top_100_udp_nmap.xml 10.10.186.183" start="1657369390" startstr="Sat Jul  9 17:53:10 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="100" services="7,9,17,19,49,53,67-69,80,88,111,120,123,135-139,158,161-162,177,427,443,445,497,500,514-515,518,520,593,623,626,631,996-999,1022-1023,1025-1030,1433-1434,1645-1646,1701,1718-1719,1812-1813,1900,2000,2048-2049,2222-2223,3283,3456,3703,4444,4500,5000,5060,5353,5632,9200,10000,17185,20031,30718,31337,32768-32769,32771,32815,33281,49152-49154,49156,49181-49182,49185-49186,49188,49190-49194,49200-49201,65024"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1657369390"/>
+<taskend task="NSE" time="1657369390"/>
+<taskbegin task="NSE" time="1657369390"/>
+<taskend task="NSE" time="1657369390"/>
+<taskbegin task="NSE" time="1657369390"/>
+<taskend task="NSE" time="1657369390"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1657369390"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1657369390"/>
+<taskbegin task="UDP Scan" time="1657369390"/>
+<taskend task="UDP Scan" time="1657369401" extrainfo="100 total ports"/>
+<taskbegin task="Service scan" time="1657369401"/>
+<taskprogress task="Service scan" time="1657369443" percent="1.00" remaining="4158" etc="1657373601"/>
+<taskprogress task="Service scan" time="1657369499" percent="8.00" remaining="1128" etc="1657370626"/>
+<taskprogress task="Service scan" time="1657369541" percent="31.00" remaining="312" etc="1657369853"/>
+<taskprogress task="Service scan" time="1657369638" percent="61.00" remaining="152" etc="1657369790"/>
+<taskprogress task="Service scan" time="1657369699" percent="85.00" remaining="53" etc="1657369752"/>
+<taskprogress task="Service scan" time="1657369736" percent="91.00" remaining="34" etc="1657369769"/>
+<taskend task="Service scan" time="1657369791" extrainfo="100 services on 1 host"/>
+<taskbegin task="Traceroute" time="1657369798"/>
+<taskend task="Traceroute" time="1657369798"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1657369798"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1657369798"/>
+<taskbegin task="NSE" time="1657369798"/>
+<taskprogress task="NSE" time="1657369829" percent="98.55" remaining="1" etc="1657369829"/>
+<taskprogress task="NSE" time="1657369859" percent="98.56" remaining="1" etc="1657369860"/>
+<taskprogress task="NSE" time="1657369889" percent="98.59" remaining="2" etc="1657369890"/>
+<taskprogress task="NSE" time="1657369919" percent="98.64" remaining="2" etc="1657369921"/>
+<taskprogress task="NSE" time="1657369949" percent="98.66" remaining="3" etc="1657369951"/>
+<taskprogress task="NSE" time="1657369979" percent="98.68" remaining="3" etc="1657369981"/>
+<taskprogress task="NSE" time="1657370009" percent="98.74" remaining="3" etc="1657370012"/>
+<taskprogress task="NSE" time="1657370039" percent="98.77" remaining="4" etc="1657370042"/>
+<taskprogress task="NSE" time="1657370069" percent="98.78" remaining="4" etc="1657370072"/>
+<taskprogress task="NSE" time="1657370099" percent="98.82" remaining="4" etc="1657370103"/>
+<taskprogress task="NSE" time="1657370129" percent="98.85" remaining="4" etc="1657370133"/>
+<taskprogress task="NSE" time="1657370159" percent="98.87" remaining="5" etc="1657370163"/>
+<taskprogress task="NSE" time="1657370189" percent="98.91" remaining="5" etc="1657370193"/>
+<taskprogress task="NSE" time="1657370219" percent="98.96" remaining="5" etc="1657370223"/>
+<taskprogress task="NSE" time="1657370249" percent="98.98" remaining="5" etc="1657370254"/>
+<taskprogress task="NSE" time="1657370279" percent="99.00" remaining="5" etc="1657370284"/>
+<taskprogress task="NSE" time="1657370309" percent="99.05" remaining="5" etc="1657370314"/>
+<taskprogress task="NSE" time="1657370339" percent="99.07" remaining="6" etc="1657370344"/>
+<taskprogress task="NSE" time="1657370369" percent="99.10" remaining="6" etc="1657370374"/>
+<taskprogress task="NSE" time="1657370399" percent="99.11" remaining="6" etc="1657370404"/>
+<taskprogress task="NSE" time="1657370429" percent="99.18" remaining="6" etc="1657370434"/>
+<taskprogress task="NSE" time="1657370459" percent="99.21" remaining="6" etc="1657370464"/>
+<taskprogress task="NSE" time="1657370489" percent="99.25" remaining="6" etc="1657370494"/>
+<taskprogress task="NSE" time="1657370519" percent="99.27" remaining="6" etc="1657370524"/>
+<taskprogress task="NSE" time="1657370549" percent="99.28" remaining="6" etc="1657370554"/>
+<taskprogress task="NSE" time="1657370579" percent="99.30" remaining="6" etc="1657370584"/>
+<taskprogress task="NSE" time="1657370609" percent="99.35" remaining="6" etc="1657370614"/>
+<taskprogress task="NSE" time="1657370639" percent="99.38" remaining="6" etc="1657370644"/>
+<taskprogress task="NSE" time="1657370669" percent="99.44" remaining="5" etc="1657370674"/>
+<taskprogress task="NSE" time="1657370699" percent="99.46" remaining="5" etc="1657370704"/>
+<taskprogress task="NSE" time="1657370729" percent="99.48" remaining="5" etc="1657370734"/>
+<taskprogress task="NSE" time="1657370759" percent="99.51" remaining="5" etc="1657370764"/>
+<taskprogress task="NSE" time="1657370789" percent="99.54" remaining="5" etc="1657370794"/>
+<taskprogress task="NSE" time="1657370819" percent="99.57" remaining="5" etc="1657370823"/>
+<taskprogress task="NSE" time="1657370849" percent="99.63" remaining="4" etc="1657370853"/>
+<taskprogress task="NSE" time="1657370879" percent="99.65" remaining="4" etc="1657370883"/>

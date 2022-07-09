@@ -1,0 +1,93 @@
+# Nmap 7.92 scan initiated Sat Jul  9 18:04:11 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3389 "--script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /root/thm/machines/medium/results/10.10.186.183/scans/tcp3389/tcp_3389_rdp_nmap.txt -oX /root/thm/machines/medium/results/10.10.186.183/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml 10.10.186.183
+Nmap scan report for lundc.lunar.eruca.com (10.10.186.183)
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-07-09 18:04:11 IST for 45s
+
+PORT     STATE SERVICE       REASON          VERSION
+3389/tcp open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-enum-encryption: 
+|   Security layer
+|     CredSSP (NLA): SUCCESS
+|     CredSSP with Early User Auth: SUCCESS
+|_    RDSTLS: SUCCESS
+|_ssl-date: 2022-07-09T12:34:39+00:00; 0s from scanner time.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+| ssl-cert: Subject: commonName=LUNDC.lunar.eruca.com
+| Issuer: commonName=LUNDC.lunar.eruca.com
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-07-08T12:23:46
+| Not valid after:  2023-01-07T12:23:46
+| MD5:   689c 4ba1 3e07 f9b5 8195 da85 a6a4 91e7
+| SHA-1: e3bb bc81 27a2 eaef 2444 ebe4 8107 ea31 543f 1115
+| -----BEGIN CERTIFICATE-----
+| MIIC7jCCAdagAwIBAgIQQLSWbBklRZdDKAlvnGl55DANBgkqhkiG9w0BAQsFADAg
+| MR4wHAYDVQQDExVMVU5EQy5sdW5hci5lcnVjYS5jb20wHhcNMjIwNzA4MTIyMzQ2
+| WhcNMjMwMTA3MTIyMzQ2WjAgMR4wHAYDVQQDExVMVU5EQy5sdW5hci5lcnVjYS5j
+| b20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCelB41iK2kjeVORoXM
+| L93k2VADnw6qlGY+xFxZyujlLJzbqtXamoWpUk4pQwrE6UQNW+YXzqawB/YTpizB
+| 44M4UV1alubvU6BfQFmIPm892wMkrDj6LgF6DQVSMFgKrf4oR55gDBdVlHgGw8fI
+| oNOtBC0e1HSuVE3+he1aoR50uao7Kjuty5wlALx3NJRbrRDI2yyB8GiF+0uIQMT+
+| b+Pfv6IdtVEUVaa/4TmqW0v7U+JmSQBxn81tYTadD3bdyKUQMuv/4ryqqiYfqbke
+| 2j+d4HA+HpYhHccK1FPyTvnVdfMmfaYDIm79UQFR6t26iDINWBUKe7WQa0rhy1W8
+| lRU9AgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDAN
+| BgkqhkiG9w0BAQsFAAOCAQEAXX70sVG5sahBXjrWun8/81mf1OzGFcHLpicTavN9
+| p47HqRjP6qU53jvKuZnsLV6uQSBSiF26emWYd2JYgnzklFoJB+p3XbHO/Ayslj01
+| 9fGYY/E69dowfMENjAIJeXJUqqxkTIbxdxYZHMoMaxF0pkgmF1B7A7y6vQPkQuoy
+| eROc+8kc0scFiLM82K3JVoz7nDwm/vdHK86o7Nf8JcVWrLjGk5qjzXmM3MSYp+7C
+| xjUaj0cnnR6CgN8E4e+G5N55Yw8qNI3VLGlilUgnp1NEFHRNqe6qespvhP8FrIls
+| kf0ntTdJUojhGGRpdCmZEc7NifNzmjiyfgJDXOV4U+nP7w==
+|_-----END CERTIFICATE-----
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jul  9 18:04:56 2022 -- 1 IP address (1 host up) scanned in 45.58 seconds

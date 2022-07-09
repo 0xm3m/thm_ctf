@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sat Jul  9 18:04:10 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 22 -&#45;script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN /root/thm/machines/medium/results/10.10.186.183/scans/tcp22/tcp_22_ssh_nmap.txt -oX /root/thm/machines/medium/results/10.10.186.183/scans/tcp22/xml/tcp_22_ssh_nmap.xml 10.10.186.183 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 22 -&#45;script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN /root/thm/machines/medium/results/10.10.186.183/scans/tcp22/tcp_22_ssh_nmap.txt -oX /root/thm/machines/medium/results/10.10.186.183/scans/tcp22/xml/tcp_22_ssh_nmap.xml 10.10.186.183" start="1657370050" startstr="Sat Jul  9 18:04:10 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="22"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1657370050"/>
+<taskend task="NSE" time="1657370050"/>
+<taskbegin task="NSE" time="1657370050"/>
+<taskend task="NSE" time="1657370050"/>
+<taskbegin task="SYN Stealth Scan" time="1657370051"/>
+<taskend task="SYN Stealth Scan" time="1657370051" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1657370051"/>
+<taskend task="Service scan" time="1657370051" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1657370051"/>
+<taskend task="NSE" time="1657370057"/>
+<taskbegin task="NSE" time="1657370057"/>
+<taskend task="NSE" time="1657370057"/>
+<host starttime="1657370051" endtime="1657370057"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.186.183" addrtype="ipv4"/>
+<hostnames>
+<hostname name="lundc.lunar.eruca.com" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ssh" product="OpenSSH" version="for_Windows_8.1" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:for_windows_8.1</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 87:4c:ef:4c:bf:9b:eb:32:89:e0:c4:ba:8b:23:84:c5 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCt7Uw137dVLArQCJKfwnGX8x+MwWO88g14+aWC4sVpJzn7SkKp95FkDBLeNb/WMrOKefcrWa3zHkDHRlDO/GlT4sR9AFsUBAx0wO5rI4VDnBslEn5QFTk+pa8cxEVUXqMXHaBnF8ynw8cYno/Ii91cn4UAk5zdAVGROmIIdv5nljSgOnPR3sywlETx5yZ0XQf0wWXGyxJ9Il8JzxbBqzy7KA+5oFquLBlJ38OIvKJSk6aEt7WW9qksasnXLBu+9/stqgE8SFA0wDFVLpsWgmwaIcvtzFw7KzwZmC+/H/JnIXT1t6fdztZPlSZcDtBri5jJxOqWq5xhoSjHfYC997KBSJh/BcJf0HeYH63ZpZlShvKOFTryxgWKtq4oCz3y2agIKa4XNP/Zbr+ZoyxWjE9qK2bNrv3l/TpI5fIfOqIy2FTAU487hARV8stz1B5sEeoE+xCHeowydHgIMiDxcObYsXX9vArkClL6PnN4DiDJHqy2Bu8jwUaosTL3hPnjQnU=&#xa;  256 b7:ad:cc:81:7a:7f:72:69:09:3d:98:99:4c:ea:8d:2d (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJjeonZcepR+qe9ANnqWdsKBPY0jlTihM0aoSx8PDTWhAOIUS3ffmDy1Y3LTDHZdKOM+zcw/TdCsM77g4qbSwYs=&#xa;  256 73:e4:2e:a5:8e:0f:5a:a7:57:27:2f:f3:d2:6c:e4:78 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIXXy/nA25KZdpLGgsbfqxPex+nX+RJUH3TaFDvcnybr"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQCt7Uw137dVLArQCJKfwnGX8x+MwWO88g14+aWC4sVpJzn7SkKp95FkDBLeNb/WMrOKefcrWa3zHkDHRlDO/GlT4sR9AFsUBAx0wO5rI4VDnBslEn5QFTk+pa8cxEVUXqMXHaBnF8ynw8cYno/Ii91cn4UAk5zdAVGROmIIdv5nljSgOnPR3sywlETx5yZ0XQf0wWXGyxJ9Il8JzxbBqzy7KA+5oFquLBlJ38OIvKJSk6aEt7WW9qksasnXLBu+9/stqgE8SFA0wDFVLpsWgmwaIcvtzFw7KzwZmC+/H/JnIXT1t6fdztZPlSZcDtBri5jJxOqWq5xhoSjHfYC997KBSJh/BcJf0HeYH63ZpZlShvKOFTryxgWKtq4oCz3y2agIKa4XNP/Zbr+ZoyxWjE9qK2bNrv3l/TpI5fIfOqIy2FTAU487hARV8stz1B5sEeoE+xCHeowydHgIMiDxcObYsXX9vArkClL6PnN4DiDJHqy2Bu8jwUaosTL3hPnjQnU=</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">874cef4cbf9beb3289e0c4ba8b2384c5</elem>
+<elem key="bits">3072</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJjeonZcepR+qe9ANnqWdsKBPY0jlTihM0aoSx8PDTWhAOIUS3ffmDy1Y3LTDHZdKOM+zcw/TdCsM77g4qbSwYs=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">b7adcc817a7f7269093d98994cea8d2d</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIIXXy/nA25KZdpLGgsbfqxPex+nX+RJUH3TaFDvcnybr</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">73e42ea58e0f5aa757272ff3d26ce478</elem>
+<elem key="bits">256</elem>
+</table>
+</script><script id="ssh-auth-methods" output="&#xa;  Supported authentication methods: &#xa;    publickey&#xa;    password&#xa;    keyboard-interactive"><table key="Supported authentication methods">
+<elem>publickey</elem>
+<elem>password</elem>
+<elem>keyboard-interactive</elem>
+</table>
+</script><script id="banner" output="SSH-2.0-OpenSSH_for_Windows_8.1"/><script id="ssh2-enum-algos" output="&#xa;  kex_algorithms: (10)&#xa;      curve25519-sha256&#xa;      curve25519-sha256@libssh.org&#xa;      ecdh-sha2-nistp256&#xa;      ecdh-sha2-nistp384&#xa;      ecdh-sha2-nistp521&#xa;      diffie-hellman-group-exchange-sha256&#xa;      diffie-hellman-group16-sha512&#xa;      diffie-hellman-group18-sha512&#xa;      diffie-hellman-group14-sha256&#xa;      diffie-hellman-group14-sha1&#xa;  server_host_key_algorithms: (5)&#xa;      rsa-sha2-512&#xa;      rsa-sha2-256&#xa;      ssh-rsa&#xa;      ecdsa-sha2-nistp256&#xa;      ssh-ed25519&#xa;  encryption_algorithms: (6)&#xa;      chacha20-poly1305@openssh.com&#xa;      aes128-ctr&#xa;      aes192-ctr&#xa;      aes256-ctr&#xa;      aes128-gcm@openssh.com&#xa;      aes256-gcm@openssh.com&#xa;  mac_algorithms: (10)&#xa;      umac-64-etm@openssh.com&#xa;      umac-128-etm@openssh.com&#xa;      hmac-sha2-256-etm@openssh.com&#xa;      hmac-sha2-512-etm@openssh.com&#xa;      hmac-sha1-etm@openssh.com&#xa;      umac-64@openssh.com&#xa;      umac-128@openssh.com&#xa;      hmac-sha2-256&#xa;      hmac-sha2-512&#xa;      hmac-sha1&#xa;  compression_algorithms: (2)&#xa;      none&#xa;      zlib@openssh.com"><table key="kex_algorithms">
+<elem>curve25519-sha256</elem>
+<elem>curve25519-sha256@libssh.org</elem>
+<elem>ecdh-sha2-nistp256</elem>
+<elem>ecdh-sha2-nistp384</elem>
+<elem>ecdh-sha2-nistp521</elem>
+<elem>diffie-hellman-group-exchange-sha256</elem>
+<elem>diffie-hellman-group16-sha512</elem>
+<elem>diffie-hellman-group18-sha512</elem>
+<elem>diffie-hellman-group14-sha256</elem>
+<elem>diffie-hellman-group14-sha1</elem>
+</table>
+<table key="server_host_key_algorithms">
+<elem>rsa-sha2-512</elem>
+<elem>rsa-sha2-256</elem>
+<elem>ssh-rsa</elem>
+<elem>ecdsa-sha2-nistp256</elem>
+<elem>ssh-ed25519</elem>
+</table>
+<table key="encryption_algorithms">
+<elem>chacha20-poly1305@openssh.com</elem>
+<elem>aes128-ctr</elem>
+<elem>aes192-ctr</elem>
+<elem>aes256-ctr</elem>
+<elem>aes128-gcm@openssh.com</elem>
+<elem>aes256-gcm@openssh.com</elem>
+</table>
+<table key="mac_algorithms">
+<elem>umac-64-etm@openssh.com</elem>
+<elem>umac-128-etm@openssh.com</elem>
+<elem>hmac-sha2-256-etm@openssh.com</elem>
+<elem>hmac-sha2-512-etm@openssh.com</elem>
+<elem>hmac-sha1-etm@openssh.com</elem>
+<elem>umac-64@openssh.com</elem>
+<elem>umac-128@openssh.com</elem>
+<elem>hmac-sha2-256</elem>
+<elem>hmac-sha2-512</elem>
+<elem>hmac-sha1</elem>
+</table>
+<table key="compression_algorithms">
+<elem>none</elem>
+<elem>zlib@openssh.com</elem>
+</table>
+</script></port>
+</ports>
+<times srtt="187368" rttvar="187368" to="936840"/>
+</host>
+<taskbegin task="NSE" time="1657370057"/>
+<taskend task="NSE" time="1657370057"/>
+<taskbegin task="NSE" time="1657370057"/>
+<taskend task="NSE" time="1657370057"/>
+<runstats><finished time="1657370057" timestr="Sat Jul  9 18:04:17 2022" summary="Nmap done at Sat Jul  9 18:04:17 2022; 1 IP address (1 host up) scanned in 7.46 seconds" elapsed="7.46" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

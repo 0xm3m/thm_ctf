@@ -1,0 +1,1 @@
+# Nmap 7.92 scan initiated Sat Jul  9 17:53:10 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /root/thm/machines/medium/results/10.10.186.183/scans/_full_tcp_nmap.txt -oX /root/thm/machines/medium/results/10.10.186.183/scans/xml/_full_tcp_nmap.xml 10.10.186.183

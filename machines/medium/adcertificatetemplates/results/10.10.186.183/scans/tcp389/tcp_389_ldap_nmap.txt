@@ -1,0 +1,200 @@
+# Nmap 7.92 scan initiated Sat Jul  9 18:04:10 2022 as: nmap -vv --reason -Pn -T4 -sV -p 389 "--script=banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /root/thm/machines/medium/results/10.10.186.183/scans/tcp389/tcp_389_ldap_nmap.txt -oX /root/thm/machines/medium/results/10.10.186.183/scans/tcp389/xml/tcp_389_ldap_nmap.xml 10.10.186.183
+Nmap scan report for lundc.lunar.eruca.com (10.10.186.183)
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-07-09 18:04:11 IST for 43s
+
+PORT    STATE SERVICE REASON          VERSION
+389/tcp open  ldap    syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: lunar.eruca.com, Site: Default-First-Site-Name)
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+| ldap-rootdse: 
+| LDAP Results
+|   <ROOT>
+|       domainFunctionality: 6
+|       forestFunctionality: 6
+|       domainControllerFunctionality: 7
+|       rootDomainNamingContext: DC=lunar,DC=eruca,DC=com
+|       ldapServiceName: lunar.eruca.com:lundc$@LUNAR.ERUCA.COM
+|       isGlobalCatalogReady: TRUE
+|       supportedSASLMechanisms: GSSAPI
+|       supportedSASLMechanisms: GSS-SPNEGO
+|       supportedSASLMechanisms: EXTERNAL
+|       supportedSASLMechanisms: DIGEST-MD5
+|       supportedLDAPVersion: 3
+|       supportedLDAPVersion: 2
+|       supportedLDAPPolicies: MaxPoolThreads
+|       supportedLDAPPolicies: MaxPercentDirSyncRequests
+|       supportedLDAPPolicies: MaxDatagramRecv
+|       supportedLDAPPolicies: MaxReceiveBuffer
+|       supportedLDAPPolicies: InitRecvTimeout
+|       supportedLDAPPolicies: MaxConnections
+|       supportedLDAPPolicies: MaxConnIdleTime
+|       supportedLDAPPolicies: MaxPageSize
+|       supportedLDAPPolicies: MaxBatchReturnMessages
+|       supportedLDAPPolicies: MaxQueryDuration
+|       supportedLDAPPolicies: MaxDirSyncDuration
+|       supportedLDAPPolicies: MaxTempTableSize
+|       supportedLDAPPolicies: MaxResultSetSize
+|       supportedLDAPPolicies: MinResultSets
+|       supportedLDAPPolicies: MaxResultSetsPerConn
+|       supportedLDAPPolicies: MaxNotificationPerConn
+|       supportedLDAPPolicies: MaxValRange
+|       supportedLDAPPolicies: MaxValRangeTransitive
+|       supportedLDAPPolicies: ThreadMemoryLimit
+|       supportedLDAPPolicies: SystemMemoryLimitPercent
+|       supportedControl: 1.2.840.113556.1.4.319
+|       supportedControl: 1.2.840.113556.1.4.801
+|       supportedControl: 1.2.840.113556.1.4.473
+|       supportedControl: 1.2.840.113556.1.4.528
+|       supportedControl: 1.2.840.113556.1.4.417
+|       supportedControl: 1.2.840.113556.1.4.619
+|       supportedControl: 1.2.840.113556.1.4.841
+|       supportedControl: 1.2.840.113556.1.4.529
+|       supportedControl: 1.2.840.113556.1.4.805
+|       supportedControl: 1.2.840.113556.1.4.521
+|       supportedControl: 1.2.840.113556.1.4.970
+|       supportedControl: 1.2.840.113556.1.4.1338
+|       supportedControl: 1.2.840.113556.1.4.474
+|       supportedControl: 1.2.840.113556.1.4.1339
+|       supportedControl: 1.2.840.113556.1.4.1340
+|       supportedControl: 1.2.840.113556.1.4.1413
+|       supportedControl: 2.16.840.1.113730.3.4.9
+|       supportedControl: 2.16.840.1.113730.3.4.10
+|       supportedControl: 1.2.840.113556.1.4.1504
+|       supportedControl: 1.2.840.113556.1.4.1852
+|       supportedControl: 1.2.840.113556.1.4.802
+|       supportedControl: 1.2.840.113556.1.4.1907
+|       supportedControl: 1.2.840.113556.1.4.1948
+|       supportedControl: 1.2.840.113556.1.4.1974
+|       supportedControl: 1.2.840.113556.1.4.1341
+|       supportedControl: 1.2.840.113556.1.4.2026
+|       supportedControl: 1.2.840.113556.1.4.2064
+|       supportedControl: 1.2.840.113556.1.4.2065
+|       supportedControl: 1.2.840.113556.1.4.2066
+|       supportedControl: 1.2.840.113556.1.4.2090
+|       supportedControl: 1.2.840.113556.1.4.2205
+|       supportedControl: 1.2.840.113556.1.4.2204
+|       supportedControl: 1.2.840.113556.1.4.2206
+|       supportedControl: 1.2.840.113556.1.4.2211
+|       supportedControl: 1.2.840.113556.1.4.2239
+|       supportedControl: 1.2.840.113556.1.4.2255
+|       supportedControl: 1.2.840.113556.1.4.2256
+|       supportedControl: 1.2.840.113556.1.4.2309
+|       supportedControl: 1.2.840.113556.1.4.2330
+|       supportedControl: 1.2.840.113556.1.4.2354
+|       supportedCapabilities: 1.2.840.113556.1.4.800
+|       supportedCapabilities: 1.2.840.113556.1.4.1670
+|       supportedCapabilities: 1.2.840.113556.1.4.1791
+|       supportedCapabilities: 1.2.840.113556.1.4.1935
+|       supportedCapabilities: 1.2.840.113556.1.4.2080
+|       supportedCapabilities: 1.2.840.113556.1.4.2237
+|       subschemaSubentry: CN=Aggregate,CN=Schema,CN=Configuration,DC=lunar,DC=eruca,DC=com
+|       serverName: CN=LUNDC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=lunar,DC=eruca,DC=com
+|       schemaNamingContext: CN=Schema,CN=Configuration,DC=lunar,DC=eruca,DC=com
+|       namingContexts: DC=lunar,DC=eruca,DC=com
+|       namingContexts: CN=Configuration,DC=lunar,DC=eruca,DC=com
+|       namingContexts: CN=Schema,CN=Configuration,DC=lunar,DC=eruca,DC=com
+|       namingContexts: DC=DomainDnsZones,DC=lunar,DC=eruca,DC=com
+|       namingContexts: DC=ForestDnsZones,DC=lunar,DC=eruca,DC=com
+|       isSynchronized: TRUE
+|       highestCommittedUSN: 122904
+|       dsServiceName: CN=NTDS Settings,CN=LUNDC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=lunar,DC=eruca,DC=com
+|       dnsHostName: LUNDC.lunar.eruca.com
+|       defaultNamingContext: DC=lunar,DC=eruca,DC=com
+|       currentTime: 20220709123419.0Z
+|_      configurationNamingContext: CN=Configuration,DC=lunar,DC=eruca,DC=com
+|_ssl-date: 2022-07-09T12:34:29+00:00; 0s from scanner time.
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:LUNDC.lunar.eruca.com
+| Issuer: commonName=lunar-LUNDC-CA/domainComponent=lunar
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-01-14T08:59:30
+| Not valid after:  2023-01-14T08:59:30
+| MD5:   fbe6 a302 e30d 0811 af16 e973 23c2 a14f
+| SHA-1: c828 0afe df82 0acf 7b68 39a9 1d39 e7f8 a522 4b30
+| -----BEGIN CERTIFICATE-----
+| MIIFnjCCBIagAwIBAgITGwAAAAUbCad4DQuklQAAAAAABTANBgkqhkiG9w0BAQsF
+| ADBcMRMwEQYKCZImiZPyLGQBGRYDY29tMRUwEwYKCZImiZPyLGQBGRYFZXJ1Y2Ex
+| FTATBgoJkiaJk/IsZAEZFgVsdW5hcjEXMBUGA1UEAxMObHVuYXItTFVOREMtQ0Ew
+| HhcNMjIwMTE0MDg1OTMwWhcNMjMwMTE0MDg1OTMwWjAAMIIBIjANBgkqhkiG9w0B
+| AQEFAAOCAQ8AMIIBCgKCAQEAy7MaGpin7IngdKi4AwOaPe8rxTADOBg20DsSvutT
+| pb2PoKJ+X/KnJkDxsD2amePezhhGsftHmO2wGyZ66ufyGP+aDAD6fWKoDoKTtuxL
+| sRIvj2g0QfN6TO7a3lHQOkiiJkHSUE8W2TtFtrm/L+1SGqaxSDqXPxp2FOfDlm53
+| vkMQXekKwXHWss2OcrIrhoJb1JgTVNkeUvCjbR9kmCoUESwGRW098HzXPF+CH9x4
+| ZRTWWdHEhrJBRQHzYxZGeYN1rEvXMRDoGKqQp7dSF4IuhYvI4A8ZrOHkKdMDFRMZ
+| mOlHkiswRN3aL41Nu+bh//MO/mbeHwEuf16JzjAEghF1PQIDAQABo4ICszCCAq8w
+| OAYJKwYBBAGCNxUHBCswKQYhKwYBBAGCNxUIhqjpZ4eoxjyGgZcEgeP9K4Wh8UuB
+| SgEcAgFuAgEAMCkGA1UdJQQiMCAGCCsGAQUFBwMCBggrBgEFBQcDAQYKKwYBBAGC
+| NxQCAjAOBgNVHQ8BAf8EBAMCBaAwNQYJKwYBBAGCNxUKBCgwJjAKBggrBgEFBQcD
+| AjAKBggrBgEFBQcDATAMBgorBgEEAYI3FAICMB0GA1UdDgQWBBTfs1lWbZ+Jt85I
+| pnXcEaL9uKRxWzAfBgNVHSMEGDAWgBSwVuQVDTCXfO6YFdLBHVWyW4dytTCB0QYD
+| VR0fBIHJMIHGMIHDoIHAoIG9hoG6bGRhcDovLy9DTj1sdW5hci1MVU5EQy1DQSxD
+| Tj1MVU5EQyxDTj1DRFAsQ049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2Vy
+| dmljZXMsQ049Q29uZmlndXJhdGlvbixEQz1sdW5hcixEQz1lcnVjYSxEQz1jb20/
+| Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERp
+| c3RyaWJ1dGlvblBvaW50MIHHBggrBgEFBQcBAQSBujCBtzCBtAYIKwYBBQUHMAKG
+| gadsZGFwOi8vL0NOPWx1bmFyLUxVTkRDLUNBLENOPUFJQSxDTj1QdWJsaWMlMjBL
+| ZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9uLERDPWx1
+| bmFyLERDPWVydWNhLERDPWNvbT9jQUNlcnRpZmljYXRlP2Jhc2U/b2JqZWN0Q2xh
+| c3M9Y2VydGlmaWNhdGlvbkF1dGhvcml0eTAjBgNVHREBAf8EGTAXghVMVU5EQy5s
+| dW5hci5lcnVjYS5jb20wDQYJKoZIhvcNAQELBQADggEBADT01fcgqTpaZeCTaeNE
+| /S6bTq/4vhi0SrI6bAjZPI8L8xNb6lWR/RMwXCKL0oeVzLB0Ekyk4ZBAjKNjGjAn
+| i93szxg8wnXNGwcITe8b32A3coHQF49Hlf98q/IjsYo377KebBYlLBf5rCDG/TyY
+| CiB6GjnDTF8fmROtnVMBfFSOwgg4ji8CLVt5PjNtT05r6P6Sk48HiAfZHho9eFc2
+| cszWP+17ivGsL/c16iCsFFZn5yXjbxLwmlFVU9LNuoRaR03dzQOZSSNykqyir+Zt
+| /8fO7vbg3uOsCqJUAxvps5Dw4bKoKWF9XJAHz4FlGK51BaqenVwZ1xIeEC7MsHHp
+| qGI=
+|_-----END CERTIFICATE-----
+Service Info: Host: LUNDC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jul  9 18:04:54 2022 -- 1 IP address (1 host up) scanned in 43.77 seconds
